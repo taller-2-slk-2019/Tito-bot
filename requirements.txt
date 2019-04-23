@@ -2,11 +2,17 @@
 appdirs==1.4.3
 applib==1.2
 chardet==3.0.4
+Click==7.0
 cmdln==2.0.0
 CodeIntel==2.0.0
 esprima==4.0.1
+Flask==1.0.2
 gunicorn==19.9.0
 Inflector==2.0.12
+itsdangerous==1.1.0
+Jinja2==2.10.1
 libclang-py3==3.9.0
+MarkupSafe==1.1.1
 six==1.12.0
+Werkzeug==0.15.2
 zope.cachedescriptors==4.3.1
