@@ -4,7 +4,7 @@
 
 https://tito-bot.herokuapp.com/
 
-### Developement
+### Development
 
 - flask run  (localhost:5000)
 
