@@ -2,6 +2,9 @@ from bot_commands.BotCommandHelp import BotCommandHelp
 from bot_commands.BotCommandInfo import BotCommandInfo
 from bot_commands.BotCommandMe import BotCommandMe
 from bot_commands.BotCommandMute import BotCommandMute
+from controllers.ServerController import ServerController
+from helpers.CommandRequest import CommandRequest
+from helpers.CommandResponse import CommandResponse
 
 
 class BotController:
@@ -13,26 +16,24 @@ class BotController:
     }
 
     def analyze_message(self, message):
-        bot_name = message['bot']
-        msg = message['message']
-        channel_id = message['channelId']
-        sender_id = message['senderId']
+        request = CommandRequest(message)
 
         try:
-            command_name = msg.split()[0]
+            command_name = request.message.split()[0]
             command = self.COMMANDS[command_name]
-            params = msg.replace(command_name).strip()
+            params = request.message.replace(command_name).strip()
 
-            result = command.apply(params, channel_id, sender_id)
-            self.send_result(result, channel_id, bot_name)
+            result = command.apply(params, request.channel_id, request.sender_id)
+            self.send_result(result, request)
 
         except:
-            self.send_error(channel_id, bot_name)
+            self.send_error(request)
 
-    def send_result(self, result, channel_id, bot_name):
-        # TODO result
-        return
+    def send_result(self, result, request):
+        response = CommandResponse(request, result)
+        ServerController().send_response(response)
 
-    def send_error(self, channel_id, bot_name):
-        # TODO error
-        return
+    def send_error(self, request):
+        error = "No pude entender tu mensaje. Utilizá el comando help para saber cómo puedo ayudarte."
+        response = CommandResponse(request, error)
+        ServerController().send_response(response)
