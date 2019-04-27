@@ -29,7 +29,7 @@ class BotCommandInfo:
 
         result += f'Integrantes: \n'
         for user in users:
-            result += f'  - {user["name"]}'
+            result += f'  - {user["name"]}\n'
 
         return result
 
