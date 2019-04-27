@@ -1,4 +1,4 @@
-class WelcomeRequest:
+class ChannelRequest:
 
     def __init__(self, data):
         self.bot_name = data['bot']

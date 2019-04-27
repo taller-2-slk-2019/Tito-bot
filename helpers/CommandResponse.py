@@ -6,7 +6,8 @@ class CommandResponse:
 
     def get_data(self):
         return {
-            'channelId': self.request.channel_id,
+            'channelId': getattr(self.request, 'channel_id', None),
+            'conversationId': getattr(self.request, 'conversation_id', None),
             'message': self.result,
             'bot': self.request.bot_name
         }
