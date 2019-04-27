@@ -2,8 +2,7 @@ import requests
 
 
 class ServerController:
-    # BASE_URL = 'https://slack-taller2.herokuapp.com'
-    BASE_URL = 'http://localhost:3000'  # TODO remove this
+    BASE_URL = 'https://slack-taller2.herokuapp.com'
     TIMEOUT = 180
 
     def send_response(self, response):
