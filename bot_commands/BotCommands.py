@@ -13,8 +13,8 @@ COMMANDS = {
 }
 
 DESCRIPTIONS = {
-    'me': 'Muestra los comandos disponibles',
+    'me': 'Muestra información del usuario que envía el mensaje',
     'info': 'Muestra información del canal',
-    'mute': 'Desactiva respuestas por n segundos',
-    'help': 'Muestra información del usuario que envía el mensaje'
+    'mute <n>': 'Desactiva respuestas por n segundos',
+    'help': 'Muestra los comandos disponibles'
 }

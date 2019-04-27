@@ -8,7 +8,7 @@ class BotCommandHelp:
         result = 'Estos son los comandos que entiendo: \n'
 
         for (command, description) in commands.items():
-            result += f'  -{command}: {description}\n'
+            result += f'  - {command}: {description}\n'
 
         return result
 

@@ -22,6 +22,10 @@ class ServerController:
         url = f'{self.BASE_URL}/channels/{channel_id}/users'
         return self._get(url)
 
+    def get_channel_statistics(self, channel_id):
+        url = f'{self.BASE_URL}/channels/{channel_id}/statistics'
+        return self._get(url)
+
     # private methods
 
     def _get(self, url):
