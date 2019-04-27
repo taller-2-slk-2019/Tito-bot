@@ -1,4 +1,4 @@
-from dateutil.parser import *
+from helpers.DateParser import DateParser
 from controllers.ServerController import ServerController
 
 
@@ -11,6 +11,6 @@ class BotCommandMe:
         result += f'Usuario: {user["username"]}\n'
         result += f'Nombre: {user["name"]}\n'
         result += f'Email: {user["email"]}\n'
-        result += f'Se unió el {parse(user["createdAt"]).strftime("%d/%m/%Y")}\n'
+        result += f'Se unió el {DateParser.parse(user["createdAt"])}\n'
 
         return result

@@ -8,9 +8,25 @@ class ServerController:
 
     def send_response(self, response):
         url = f'{self.BASE_URL}/bots/messages'
-        requests.post(url, json=response.get_data(), timeout=self.TIMEOUT)
+        self._post(url, response.get_data())
 
     def get_user(self, user_id):
         url = f'{self.BASE_URL}/users/{user_id}'
+        return self._get(url)
+
+    def get_channel(self, channel_id):
+        url = f'{self.BASE_URL}/channels/{channel_id}'
+        return self._get(url)
+
+    def get_channel_users(self, channel_id):
+        url = f'{self.BASE_URL}/channels/{channel_id}/users'
+        return self._get(url)
+
+    # private methods
+
+    def _get(self, url):
         response = requests.get(url, timeout=self.TIMEOUT)
         return response.json()
+
+    def _post(self, url, data):
+        requests.post(url, json=data, timeout=self.TIMEOUT)
