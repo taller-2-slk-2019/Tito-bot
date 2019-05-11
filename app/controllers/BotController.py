@@ -6,12 +6,18 @@ from app.helpers.CommandRequest import CommandRequest
 from app.helpers.CommandResponse import CommandResponse
 from app.helpers.ChannelRequest import ChannelRequest
 from app.helpers.ConversationRequest import ConversationRequest
+from app.models import Channel
+from datetime import datetime
 
 
 class BotController:
 
     def analyze_message(self, message):
         request = CommandRequest(message)
+        channel = Channel.query.filter_by(id=request.channel_id).first()
+
+        if channel is not None and channel.enabled > datetime.now():
+            return
 
         try:
             command_name = request.message.split(' ')[0]
