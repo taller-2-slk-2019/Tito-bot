@@ -1,5 +1,5 @@
-from helpers.DateParser import DateParser
-from controllers.ServerController import ServerController
+from app.helpers.DateParser import DateParser
+from app.controllers.ServerController import ServerController
 
 
 class BotCommandMe:
