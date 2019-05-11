@@ -1,4 +1,4 @@
-from bot_commands import BotCommands
+from app.bot_commands import BotCommands
 
 
 class BotCommandHelp:

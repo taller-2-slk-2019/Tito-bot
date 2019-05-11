@@ -1,4 +1,4 @@
-from controllers.ServerController import ServerController
+from app.controllers.ServerController import ServerController
 
 
 class BotActionCreate:

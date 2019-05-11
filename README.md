@@ -19,6 +19,12 @@ https://tito-bot.herokuapp.com/
 
 - pip install -r requirements.txt  (actualizar librerias)
 
+### Database
+
+flask db migrate
+
+flask db upgrade
+
 ### Libreria Requests
 
 https://2.python-requests.org//en/master/user/quickstart/

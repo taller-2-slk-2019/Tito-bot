@@ -1,11 +1,11 @@
-from bot_actions.BotActionCreate import BotActionCreate
-from bot_actions.BotActionWelcome import BotActionWelcome
-from bot_commands import BotCommands
-from controllers.ServerController import ServerController
-from helpers.CommandRequest import CommandRequest
-from helpers.CommandResponse import CommandResponse
-from helpers.ChannelRequest import ChannelRequest
-from helpers.ConversationRequest import ConversationRequest
+from app.bot_actions.BotActionCreate import BotActionCreate
+from app.bot_actions.BotActionWelcome import BotActionWelcome
+from app.bot_commands import BotCommands
+from app.controllers.ServerController import ServerController
+from app.helpers.CommandRequest import CommandRequest
+from app.helpers.CommandResponse import CommandResponse
+from app.helpers.ChannelRequest import ChannelRequest
+from app.helpers.ConversationRequest import ConversationRequest
 
 
 class BotController:

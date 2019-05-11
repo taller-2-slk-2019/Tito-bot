@@ -1,7 +1,7 @@
-from bot_commands.BotCommandHelp import BotCommandHelp
-from bot_commands.BotCommandInfo import BotCommandInfo
-from bot_commands.BotCommandMe import BotCommandMe
-from bot_commands.BotCommandMute import BotCommandMute
+from app.bot_commands.BotCommandHelp import BotCommandHelp
+from app.bot_commands.BotCommandInfo import BotCommandInfo
+from app.bot_commands.BotCommandMe import BotCommandMe
+from app.bot_commands.BotCommandMute import BotCommandMute
 
 
 
