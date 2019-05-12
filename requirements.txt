@@ -19,6 +19,7 @@ Jinja2==2.10.1
 libclang-py3==3.9.0
 Mako==1.0.10
 MarkupSafe==1.1.1
+psycopg2-binary==2.8.2
 python-dateutil==2.8.0
 python-editor==1.0.4
 requests==2.21.0
