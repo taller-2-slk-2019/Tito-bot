@@ -3,6 +3,7 @@ import requests
 
 class ServerController:
     BASE_URL = 'https://slack-taller2.herokuapp.com'
+    BOT_TOKEN = 'dfe53812-8ce9-41db-a57e-79456936dfb3'
     TIMEOUT = 180
 
     def send_response(self, response):
@@ -32,4 +33,4 @@ class ServerController:
         return response.json()
 
     def _post(self, url, data):
-        requests.post(url, json=data, timeout=self.TIMEOUT)
+        requests.post(url, json=data, timeout=self.TIMEOUT, headers={'botToken': self.BOT_TOKEN})
