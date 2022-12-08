@@ -2,7 +2,7 @@
 alembic==1.0.10
 appdirs==1.4.3
 applib==1.2
-certifi==2019.3.9
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 cmdln==2.0.0
